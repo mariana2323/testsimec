@@ -16,3 +16,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/sheldongame/', 'sheldongameController@index');
+Route::post('/sheldongame/play', 'sheldongameController@playSheldonGame');
+
+Route::get('/mastermind/', 'mastermindController@index');
+Route::post('/mastermind/generate', 'mastermindController@generateCode');
