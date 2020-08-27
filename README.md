@@ -32,10 +32,15 @@ Las reglas son:</p>
 <h3>Mastermind</h3>
 <p>La PC ha generado un código, para descifrarlo debes adivinar la posición de cada color. Tienes 8 intentos. Elige el orden de los colores y si aciertas su posición la PC marcará su recuadro con negro. Logra los 4 y ganas!</p>
 
+<h1>About the project</h1>
+<p>It was created with a PHP Framework, called Laravel version 7. <br><br>
+Xampp was used as the enviroment, whereas APACHE run on port 80 and MariaDB was used as DB, since Docker's installation had conflicts on my PC. <br><br>
+It is necessary to run the command "php artisan migrate" in order to execute the database scripts in Laravel or you can download the .sql <a href="https://drive.google.com/file/d/1NWMdkEBhKbb89JXR2jkwtO-AJH5VjYn0/view?usp=sharing">here</a>.</p>
+
 <h1>Acerca del proyecto</h1>
 <p>Se realizó con el Framework de PHP, llamado Laravel, versión 7. <br><br>
-Se utilizó Xampp como entorno, donde se usó APACHE en el puerto 80 y se inició la base de datos en MariaDB ya que la instalación de Docker dio problemas en mi computadora por tener sistema operativo Windows.<br><br>
-Es necesario correr el comando php artisan migrate para ejecutar los scripts de la base de datos almacenados en Laravel, o también se puede descargar el archivo .sql aquí</p>
+Se utilizó Xampp como entorno, donde se usó APACHE en el puerto 80 y se inició la base de datos en MariaDB ya que la instalación de Docker tuvo conflictos en mi PC. <br><br>
+Es necesario correr el comando "php artisan migrate" para ejecutar los scripts de la base de datos almacenados en Laravel, o también se puede descargar el archivo .sql <a href="https://drive.google.com/file/d/1NWMdkEBhKbb89JXR2jkwtO-AJH5VjYn0/view?usp=sharing">aquí</a></p>
 
 <p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
 
