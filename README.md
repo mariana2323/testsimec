@@ -1,3 +1,42 @@
+<h1>Sheldon's game and Mastermind game by Ana Acosta Irigoyen for Simec test</h1>
+<h3>Sheldons Game</h3>
+<p>This expanded version of the classic rock-paper-scissors game has this new rules:</p>
+<ul>
+    <li>The scissors cut paper</li>
+<li>The paper covers the rock</li>
+<li>The rock crushes the lizard</li>
+<li>The spock crushes the scissors</li>
+<li>The scissors behead the lizard</li>
+<li>The lizard eats the paper</li>
+<li>The paper refutes the spock</li>
+<li>The spock vanishes the rock</li>
+<li>The rock crushes the scissors</li>
+    </ul>
+<h3>Mastermind</h3>
+<p>The PC has generated a code. In order to find it you must guess the position of each color. You have 8 chances. Choose the order of the colors and don't repeat them, if you guys the position the PC will mark its checkbox with black. Get the 4 right and you win!</p>
+
+<h3>El juego de Sheldon</h3>
+<p>The Lizard-Spock Expansion Rock, Paper, Scissors, Lizard, Spock es un juego de azar que  se  expande.  Primero  se  usa  para  resolver  una  disputa  sobre  qué  ver  en  la televisión  entre  Sheldon  y  Raj  en  "The  Lizard-Spock  Expansion".  Se  menciona nuevamente en "La desintegración de Rothman", donde Sheldon explica las reglas a Pennyy Barry Kripke. 
+Las reglas son:</p>
+<ul>
+    <li>Las tijeras cortan el papel</li>
+<li>El papel cubre la roca</li>
+<li>La roca aplasta al lagarto</li>
+<li>El lagarto envenena a Spock</li>
+<li>Spock aplasta las tijeras</li>
+<li>Las tijeras decapitan al lagarto</li>
+<li>El lagarto come el papel</li>
+<li>El papel refuta a Spock</li>
+<li>La roca aplasta las tijeras</li>
+    </ul>
+<h3>Mastermind</h3>
+<p>La PC ha generado un código, para descifrarlo debes adivinar la posición de cada color. Tienes 8 intentos. Elige el orden de los colores y si aciertas su posición la PC marcará su recuadro con negro. Logra los 4 y ganas!</p>
+
+<h1>Acerca del proyecto</h1>
+<p>Se realizó con el Framework de PHP, llamado Laravel, versión 7. <br><br>
+Se utilizó Xampp como entorno, donde se usó APACHE en el puerto 80 y se inició la base de datos en MariaDB ya que la instalación de Docker dio problemas en mi computadora por tener sistema operativo Windows.<br><br>
+Es necesario correr el comando php artisan migrate para ejecutar los scripts de la base de datos almacenados en Laravel, o también se puede descargar el archivo .sql aquí</p>
+
 <p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
 
 <p align="center">
