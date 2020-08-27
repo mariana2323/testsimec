@@ -1,21 +1,5 @@
 @extends('principal')
-@section('navegacion')
-    <div class="container-fluid">
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-                <li width="200px" class="active">
-                    <a class="nav-link" href="{{ url('/') }}">Inicio </a>
-                </li>
-                <li width="100px" class="active">
-                    <a class="nav-link" href="{{ url('/sheldongame') }}">Sheldon game </a>
-                </li>
-                <li width="100px" class="active">
-                    <a class="nav-link" href="{{ url('/mastermind') }}">Mastermind </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-@endsection
+@extends('navbar')
 @section('seccion')
     <div class="flex-center position-ref full-height">
 
@@ -40,6 +24,8 @@
         <form style="padding-left: 30px;" method="post" action="/sheldongame/play/">
             @csrf
             <fieldset>
+                <label>Insert your nick name here:</label>
+                <input type="text" required name="alias"/><br>
                 @foreach($data as $op)
                     <input type="radio" required name="sheloption" value="{{$op["id_sheldongame"]}}">{{$op["opcion"]}}
                     <img class="sheldonimgs" src="{{asset($op["image"])}}"/><br>

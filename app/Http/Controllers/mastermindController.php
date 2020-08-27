@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\mastermind;
+use App\puntuation;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Http\Request;
@@ -22,6 +23,7 @@ class mastermindController extends BaseController
     shuffle($keys);
     foreach ($keys as $key)
       $code[$key] = $arr[$key];
+    $_SESSION["alias"] = $request->input('alias');
     $_SESSION["code"] = implode(",", $code);
     $_SESSION["attempts"] = 8;
     return view('playmastermind', ['data' => $resultado, 'attempt' => $_SESSION["attempts"]]);
@@ -54,8 +56,9 @@ class mastermindController extends BaseController
           $res = DB::table('mastermind')->where('id_mastermind', '=', $code[$i])->get();
           $resultado[$i]=$res[0]->image;
         }
+        $this->saveMastermindPuntuation();
         session_destroy();
-        return view('messagemaster', ['success' => true, 'message' => 'You solve it!', 'data' => $resultado]);
+        return view('messagemaster', ['success' => true, 'message' => 'You solve it! You won 30 pts', 'data' => $resultado]);
       }
       else
       {
@@ -85,6 +88,24 @@ class mastermindController extends BaseController
       $resultado = DB::table('mastermind')->whereIn('id_mastermind', $code)->get();
       session_destroy();
       return view('messagemaster', ['success' => true, 'message' => 'You failed!', 'data' => $resultado]);
+    }
+  }
+  public function saveMastermindPuntuation()
+  {
+    $resultado = DB::table('puntuation')->where('nick', '=', $_SESSION["alias"])->get();
+
+    if (isset($resultado[0]))//needs an update
+    {
+      DB::table('puntuation')
+        ->where('id_puntuation', $resultado[0]->id_puntuation)
+        ->update(['puntuation_master' => (int)($resultado[0]->puntuation_master)+30]);
+    }
+    else//needs to insert
+    {
+      $newScore = new puntuation;
+      $newScore->nick = $_SESSION["alias"];
+      $newScore->puntuation_master = 30;
+      $newScore->save();
     }
   }
 }

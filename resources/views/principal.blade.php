@@ -14,9 +14,6 @@
 </head>
 <body>
 <header>
-    <nav class="navbar navbar-default">
-        @yield('navegacion')
-    </nav>
 </header>
 
 <section id="seccion1">

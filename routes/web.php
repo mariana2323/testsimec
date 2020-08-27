@@ -24,4 +24,5 @@ Route::get('/mastermind/', function (){
   });
 Route::post('/mastermind/generate/', 'mastermindController@generateCode');
 Route::post('/mastermind/play/', 'mastermindController@playMastermind');
+Route::get('/score/', 'puntuationController@index');
 
