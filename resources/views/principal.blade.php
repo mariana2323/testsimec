@@ -14,7 +14,7 @@
 </head>
 <body>
 <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-default">
         @yield('navegacion')
     </nav>
 </header>
@@ -23,8 +23,8 @@
     @yield('seccion')
 </section>
 
-<footer>
-    <h3>2020, Ing. Ana Acosta Irigoyen - anaacostairigoyen@gmail.com</h3>
+<footer class="footer">
+    <p>       2020, Ing. Ana Acosta Irigoyen - anaacostairigoyen@gmail.com</p>
 </footer>
 </body>
 </html>

@@ -1,7 +1,4 @@
 @extends('principal')
-@section('js')
-    <script>alert('{{$message}}')</script>
-@endsection
 @section('navegacion')
     <div class="container-fluid">
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -21,18 +18,13 @@
 @endsection
 @section('seccion')
     <div class="flex-center position-ref full-height">
-        <div>
-            <h3>Sheldons choice:</h3>
-            <img width="100px" src="{{asset($pc[0]->image)}}"/>
-        </div>
-        <div class="alert alert-info" role="alert">{{$message}}</div>
-        @if($success == 'tie')
-            <img width="100px" src="../../img/tie.jpg"/>
-        @elseif($success)
-            <img width="100px" src="../../img/youwin.jpg"/>
-        @else
-            <img width="100px" src="../../img/youlose.jpg"/>
-        @endif
+        <form method="post" action="/mastermind/generate/">
+            @csrf
+            <img src="{{asset('img/4dots.jpeg')}}"/>
+            <p>The PC has generated a code. In order to find it you must guess the position of each color. <br>You have 8 chances. Choose the order of the colors and don't repeat them, if you guys the position the PC will mark its checkbox with black. <br>Get the 4 right and you win!</p>
+            <p>La PC ha generado un código, para descifrarlo debes adivinar la posición de cada color. <br>Tienes 8 intentos. Elige el orden de los colores y si aciertas su posición la PC marcará su recuadro con negro. Logra los 4 y ganas!</p>
+            <input class="btn btn-success" type="submit" value="GENERATE CODE"/>
+        </form>
     </div>
 @endsection
 

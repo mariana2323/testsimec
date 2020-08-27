@@ -52,3 +52,24 @@ html, body {
 {
     height: 40px;
 }
+.divhorizontal
+{
+    overflow: hidden;
+}
+.innerdifhor
+{
+    float: left;
+    border: solid 1px;
+}
+.h3centered
+{
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.imgcentered
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

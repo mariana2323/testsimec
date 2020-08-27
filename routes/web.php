@@ -19,5 +19,9 @@ Route::get('/', function () {
 Route::get('/sheldongame/', 'sheldongameController@index');
 Route::post('/sheldongame/play', 'sheldongameController@playSheldonGame');
 
-Route::get('/mastermind/', 'mastermindController@index');
-Route::post('/mastermind/generate', 'mastermindController@generateCode');
+Route::get('/mastermind/', function (){
+    return view('mastermind');
+  });
+Route::post('/mastermind/generate/', 'mastermindController@generateCode');
+Route::post('/mastermind/play/', 'mastermindController@playMastermind');
+
